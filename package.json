@@ -1,0 +1,16 @@
+{
+  "name": "opanel",
+  "version": "1.0.0",
+  "description": "operator and supervisor panel for callcenter",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server/server.js"
+  },
+  "author": "Alexey Kulishevich <lexfer.mail@mgmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "asterisk-ami-client": "^1.1.5",
+    "config": "^3.3.3",
+    "ws": "^7.4.2"
+  }
+}
