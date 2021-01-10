@@ -4,7 +4,7 @@
   "description": "operator and supervisor panel for callcenter",
   "main": "index.js",
   "scripts": {
-    "start": "node server/server.js"
+    "start": "node app.js"
   },
   "author": "Alexey Kulishevich <lexfer.mail@mgmail.com>",
   "license": "ISC",
