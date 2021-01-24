@@ -8,31 +8,28 @@ class Extension {
       this.element     = this._createIcon()
       this.lineStatus(this.status)
 
-      return this
+      return this;
    }
 
    lineStatus(status) {
+
       console.log("lineStatus:", status)
       console.log("lineStatus:", this.element)
-    
-      if (status === 'FREE'){
-         this.element.style.backgroundColor = "green"
-      }
-      if (status === 'RING'){
-         this.element.style.backgroundColor = "orange"
-      }
-      if (status === 'INUSE'){
-         this.element.style.backgroundColor = "blue"
-      }  
-      if (status === 'UNREGISTER') {
-         this.element.style.borderColor = "black"
-         this.element.style.backgroundColor = "gray"
-      }
-      if (status === 'REGISTER') {
-         this.element.style.borderColor = "lightgreen"
-         this.element.style.backgroundColor = "green"
-      }
-      return this
+
+      let info = {
+         FREE:       {backgroundColor: 'green'},
+         RING:       {backgroundColor: 'green'},
+         INUSE:      {backgroundColor: 'green'},
+         UNREGISTER: {backgroundColor: 'green', borderColor: 'black'},
+         REGISTER:   {backgroundColor: 'green', borderColor: 'lightgreen'}
+      };
+
+      const cur_info = info[status] || {}; 
+
+      this.element.style.borderColor = cur_info.borderColor;
+      this.element.style.backgroundColor = cur_info.backgroundColor;
+      
+      return this;
    }
 
    _createIcon(){

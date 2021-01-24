@@ -21,7 +21,7 @@
 
 
 function startWEBsocket() {
-  const socket = new WebSocket('ws://127.0.0.1:8080', ["soap", "wamp"]);
+  const socket = new WebSocket('ws://127.0.0.1:8881', ["soap", "wamp"]);
 
   socket.onopen = function (e) {
     console.log("[open] Соединение установлено");

@@ -1,13 +1,14 @@
 "use strict"
 
-class AMIcommand {
+class AMIactions {
    
    constructor(AMIobj){
       this.AMIobj = AMIobj
    }
 
-   GetQueueMembers(queue) {
-      console.log("GetQueueMembers", this.AMIobj)
+   getQueueMembers(queue) {
+    this.AMIobj.action({Action: 'Ping'})  
+      
    }
    
    SetPause(queue, iface) {
@@ -23,4 +24,4 @@ class AMIcommand {
    }
 }
 
-module.exports = AMIcommand 
+module.exports = AMIactions
